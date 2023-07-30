@@ -10,9 +10,15 @@ Makes use of the REST API documented at https://app.wallabag.it/api/doc/
 
 Copy the `wallabag2.koplugin` to the koreader `plugins` directory.
 
+  * Under Android, local/koreader/plugins
+  * Under Kindle, /koreader/plugins (under Windows mount `D:\koreader\plugins`)
+
 Requires KoReader to be restarted.
 
-Plugin will show up on (top) left hand menu for file system as, `NEW: Wallabag2`.
+Plugin will show up as, `NEW: Wallabag2`, on (top) left hand menu for:
+
+  * for file browser view, file system
+  * for book reader view, bookmarks
 
 ## Usage
 
