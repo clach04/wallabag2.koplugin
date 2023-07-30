@@ -471,9 +471,12 @@ function Wallabag2:getArticleList()
     local article_list = {}
     local page = 1
     -- query the server for articles until we hit our target number
+    -- FIXME this is horrible, use the 2.4+ API to know when we've ran out
+    -- https://github.com/koreader/koreader/issues/10738 issue #10738
     while #article_list < self.articles_per_sync do
         -- get the JSON containing the article list
-        local articles_url = "/api/entries.json?archive=0"
+        local articles_url = "/api/entries?archive=0"
+                          .. "&detail=metadata"
                           .. "&page=" .. page
                           .. "&perPage=" .. self.articles_per_sync
                           .. filtering
