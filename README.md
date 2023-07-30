@@ -6,6 +6,9 @@ A KoReader plugin for Wallabag (version 2) servers.
 
 Makes use of the REST API documented at https://app.wallabag.it/api/doc/
 
+See https://github.com/koreader/koreader/issues/10738 for background,
+basically this plugin should be faster and better suited to modern wallabag instances.
+
 ## Installation
 
 Copy the `wallabag2.koplugin` to the koreader `plugins` directory.
