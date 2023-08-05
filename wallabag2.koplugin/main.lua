@@ -63,7 +63,7 @@ function Wallabag2:init()
     self.filter_tag = ""
     self.ignore_tags = ""
     self.auto_tags = ""
-    self.articles_per_sync = 30
+    self.articles_per_sync = 30  -- this is the max number of articles to get metadata for, this impacts number of epubs downloaded BUT potentially could skip ones already downloaded and not pick up new article metadata
 
     self:onDispatcherRegisterActions()
     self.ui.menu:registerToMainMenu(self)
@@ -514,6 +514,20 @@ function Wallabag2:getArticleList()
             table.insert(article_list, article)
         end
 
+        -- TODO add sanity check for articles_json.total field being present and a number
+        -- logger.warn("Wallabag2: download of page #", page, "failed with", err, code)
+        -- UIManager:show(InfoMessage:new{ text = _("Requesting article list failed."), })
+        -- return
+        if #article_list >= articles_json.total then
+            -- we now have more articles than the server has available
+            logger.dbg("Wallabag2: no more articles to query server for", articles_json.total)
+            break;
+        end
+        if page >= articles_json.pages then
+            -- no more pages of results on server
+            logger.dbg("Wallabag2: no more pages of articles to query server for", articles_json.total)
+            break;
+        end
         page = page + 1
     end
 
