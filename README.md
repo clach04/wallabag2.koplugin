@@ -28,3 +28,4 @@ Plugin will show up as, `NEW: Wallabag2`, on (top) left hand menu for:
 Same as Wallabag(1) plugin, see https://github.com/koreader/koreader/wiki/Wallabag
 
 NOTE Uses the **same** config file (at least for now) as existing wallabag plugin!
+I.e. `/koreader/settings/wallabag.lua`.
