@@ -29,3 +29,8 @@ Same as Wallabag(1) plugin, see https://github.com/koreader/koreader/wiki/Wallab
 
 NOTE Uses the **same** config file (at least for now) as existing wallabag plugin!
 I.e. `/koreader/settings/wallabag.lua`.
+
+## Debugging
+
+  * https://koreader.rocks/doc/topics/Hacking.md.html
+  * enable debug log https://github.com/koreader/koreader/issues/2530#issuecomment-500866288 - `Developer options`, `Enable debug logging` - goes to `crash.log`
