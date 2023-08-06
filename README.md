@@ -32,7 +32,7 @@ I.e. `/koreader/settings/wallabag.lua`.
 
 ## Debugging
 
-  * need either a real Wallabag server or (semi) compatible one such as:
+  * need either a [real Wallabag server](https://github.com/wallabag/wallabag) or (semi) compatible one such as:
       * https://github.com/clach04/whatabagacack
       * https://github.com/LordEidi/wombag
   * https://koreader.rocks/doc/topics/Hacking.md.html
