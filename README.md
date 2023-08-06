@@ -32,6 +32,8 @@ I.e. `/koreader/settings/wallabag.lua`.
 
 ## Debugging
 
-  * need either a real Wallabag server or compatible, https://github.com/clach04/whatabagacack
+  * need either a real Wallabag server or (semi) compatible one such as:
+      * https://github.com/clach04/whatabagacack
+      * https://github.com/LordEidi/wombag
   * https://koreader.rocks/doc/topics/Hacking.md.html
   * enable debug log https://github.com/koreader/koreader/issues/2530#issuecomment-500866288 - `Developer options`, `Enable debug logging` - goes to `crash.log`
