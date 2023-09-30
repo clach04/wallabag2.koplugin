@@ -121,7 +121,7 @@ function Wallabag2:init()
     end
 
     if self.ui and self.ui.link then
-        self.ui.link:addToExternalLinkDialog("25_wallabag", function(this, link_url)
+        self.ui.link:addToExternalLinkDialog("25_wallabag2", function(this, link_url)
             return {
                 text = _("Add to Wallabag2"),
                 callback = function()
